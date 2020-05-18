@@ -87,7 +87,14 @@ input{
         <div style="margin-top:8px;">
             <input type="submit" name="login" value="Login" class="tombol" />
         </div>
-</form>
+    </form>
+
+    <?php
+    $user = @$_POST['user'];
+    $pass = @$_POST['pass'];
+    $login = @$_POST['login'];
+    ?>
+    </div>
 </div>
 
 </body>
