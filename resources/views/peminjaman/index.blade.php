@@ -34,7 +34,7 @@
                     <h1 class="mt-3">Daftar Peminjaman Buku</h1>
                
                     <table class="table">
-                        <thead class="thead-info">
+                        <thead class="thead-dark">
                             <tr>
                                 <th scope="col">#</th>
                                 <th scope="col">Nama</th>
