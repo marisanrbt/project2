@@ -93,6 +93,11 @@ input{
     $user = @$_POST['user'];
     $pass = @$_POST['pass'];
     $login = @$_POST['login'];
+
+    if($login) {
+        if($user == "")
+            echo "Username tidak boleh kosong.";
+    }
     ?>
     </div>
 </div>

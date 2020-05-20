@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('weblogin');
+    return view('navbar');
+});
+
+Route::get('/peminjaman', function () {
+    return view('peminjaman');
 });
