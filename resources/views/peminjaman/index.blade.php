@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Pengembalian Buku</title>
+    <title>Daftar Peminjaman Buku</title>
   </head>
   <body>
 
@@ -20,9 +20,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="{{ url('/') }}">Beranda</a>
-                        <a class="nav-item nav-link" href="{{ url('/peminjaman') }}">Peminjaman</a>
-                        <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">pengembalian</a>
+                        <a class="nav-item nav-link active" href="/">Beranda</a>
+                        <a class="nav-item nav-link" href="/peminjaman">Peminjaman</a>
+                        <a class="nav-item nav-link" href="/pengembalian">Pengembalian</a>
                     </div>
                 </div>
             </div>
@@ -31,12 +31,41 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mt-4">Silahkan isi form pengembalian buku berikut:</h1>
+                    <h1 class="mt-3">Daftar Peminjaman Buku</h1>
+               
+                    <table class="table">
+                        <thead class="thead-info">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nama</th>
+                                <th scope="col">Username</th>
+                                <th scope="col">NIM</th>
+                                <th scope="col">Judul Buku</th>
+                                <th scope="col">Nama Penerbit</th>
+                                <th scope="col">Tanggal Peminjaman</th>
+                                <th scope="col">Tindakan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Marisa Nurbaiti</td>
+                                <td>marisanrbt</td>
+                                <td>G54180051</td>
+                                <td>Kalkulus</td>
+                                <td>Gramedia Pusaka</td>
+                                <td>05 Jul 2020</td>
+                                <td>
+                                    <a href="" class="badge badge-success">edit</a>
+                                    <a href="" class="badge badge-danger">delete</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
 
-    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

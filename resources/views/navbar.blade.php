@@ -12,7 +12,7 @@
   </head>
   <body>
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container">
                 <a class="navbar-brand" href="#">Perpustakaan IPB</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,9 +20,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="/">Beranda</a>
-                        <a class="nav-item nav-link" href="/peminjaman">Peminjaman</a>
-                        <a class="nav-item nav-link" href="/pengembalian">Pengembalian</a>
+                        <a class="nav-item nav-link active" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-item nav-link" href="{{ url('/peminjaman') }}">Peminjaman</a>
+                        <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">pengembalian</a>
                     </div>
                 </div>
             </div>

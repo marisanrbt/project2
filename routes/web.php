@@ -13,14 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('navbar');
-});
+//Route::get('/', function () {
+  //  return view('navbar');
+//});
 
-Route::get('/pengembalian', function () {
-    return view('pengembalian');
-});
+//Route::get('/pengembalian', function () {
+//    return view('pengembalian');
+//});
 
-Route::get('/peminjaman', function () {
-    return view('peminjaman');
-});
+//Route::get('/peminjaman', function () {
+//    return view('peminjaman');
+//});
+
+Route::get('/', 'PagesController@beranda');
+
+Route::get('/peminjaman', 'PeminjamanController@index');
+Route::get('/pengembalian', 'PengembalianController@show');
