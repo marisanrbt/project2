@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mt-4">Silahkan isi form berikut:</h1>
+                    <h1 class="mt-4">Silahkan isi form peminjaman berikut:</h1>
                 </div>
             </div>
         </div>

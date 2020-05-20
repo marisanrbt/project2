@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('navbar');
 });
 
+Route::get('/pengembalian', function () {
+    return view('pengembalian');
+});
+
 Route::get('/peminjaman', function () {
     return view('peminjaman');
 });

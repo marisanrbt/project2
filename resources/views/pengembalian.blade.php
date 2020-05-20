@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Perpustakaan IPB</title>
+    <title>Pengembalian Buku</title>
   </head>
   <body>
 
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mt-4">Selamat Datang di Perpustakaan IPB, Silahkan pilih menu pada bar diatas</h1>
+                    <h1 class="mt-4">Silahkan isi form pengembalian buku berikut:</h1>
                 </div>
             </div>
         </div>
