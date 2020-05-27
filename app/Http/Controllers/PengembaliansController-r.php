@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Pengembalian;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
-class PeminjamanController extends Controller
+class PengembaliansController-r extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,7 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $peminjaman = DB::table('peminjaman')->get();
-        return view('peminjaman.index', ['peminjaman' => $peminjaman]);
+        //
     }
 
     /**
@@ -25,7 +24,7 @@ class PeminjamanController extends Controller
      */
     public function create()
     {
-        return view('peminjaman.create');
+        //
     }
 
     /**
@@ -36,32 +35,16 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //$peminjaman = new Peminjaman;
-        //$peminjaman->nama = $request->nama;
-        //$peminjaman->username = $request->username;
-        //$peminjaman->nim = $request->nim;
-        //$peminjaman->judul_buku = $request->judul_buku;
-        //$peminjaman->penerbit = $request->penerbit;
-
-        //$student->save();
-        Peminjaman::create([
-            'nama' => $request->nama,
-            'username' => $request->username,
-            'nim' => $request->nim,
-            'judul_buku' => $request->judul_buku,
-            'penerbit' => $request->penerbit
-        ]);
-
-        return redirect('/peminjaman');
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Pengembalian $pengembalian)
     {
         //
     }
@@ -69,10 +52,10 @@ class PeminjamanController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Pengembalian $pengembalian)
     {
         //
     }
@@ -81,10 +64,10 @@ class PeminjamanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Pengembalian $pengembalian)
     {
         //
     }
@@ -92,10 +75,10 @@ class PeminjamanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Pengembalian $pengembalian)
     {
         //
     }

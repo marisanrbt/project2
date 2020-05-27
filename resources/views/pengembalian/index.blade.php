@@ -31,9 +31,7 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mt-3">Daftar Peminjaman Buku</h1>
-               
-                    <a href="/peminjaman/create" class="btn btn-primary my-3">Form Peminjaman Buku</a>
+                    <h1 class="mt-3">Daftar Pengembalian Buku</h1>
 
                     <table class="table">
                         <thead class="thead-dark">
@@ -44,12 +42,12 @@
                                 <th scope="col">NIM</th>
                                 <th scope="col">Judul Buku</th>
                                 <th scope="col">Nama Penerbit</th>
-                                <th scope="col">Tanggal Peminjaman</th>
+                                <th scope="col">Tanggal Pengembalian</th>
                                 <th scope="col">Tindakan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach( $peminjaman as $pmjmn )
+                            @foreach( $pengembalian as $pngmb )
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $pmjmn->nama }}</td>
@@ -57,7 +55,7 @@
                                 <td>{{ $pmjmn->nim }}</td>
                                 <td>{{ $pmjmn->judul_buku }}</td>
                                 <td>{{ $pmjmn->penerbit }}</td>
-                                <td>{{ $pmjmn->tgl_peminjaman }}</td>
+                                <td>{{ $pmjmn->tgl_pengembalian }}</td>
                                 <td>
                                     <a href="" class="badge badge-success">edit</a>
                                     <a href="" class="badge badge-danger">delete</a>

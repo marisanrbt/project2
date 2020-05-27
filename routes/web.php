@@ -28,4 +28,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'PagesController@beranda');
 
 Route::get('/peminjaman', 'PeminjamanController@index');
-Route::get('/pengembalian', 'PengembalianController@show');
+Route::get('/peminjaman/create', 'PeminjamanController@create');
+Route::post('/peminjaman', 'PeminjamanController@store');
+
+Route::get('/pengembalian', 'PengembaliansController@show');
