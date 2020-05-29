@@ -22,7 +22,7 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active" href="{{ url('/') }}">Beranda</a>
                         <a class="nav-item nav-link" href="{{ url('/peminjaman') }}">Peminjaman</a>
-                        <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">pengembalian</a>
+                        <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">Pengembalian</a>
                     </div>
                 </div>
             </div>

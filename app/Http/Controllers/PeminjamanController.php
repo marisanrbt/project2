@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Peminjaman;
 
 class PeminjamanController extends Controller
 {
@@ -14,10 +15,10 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $peminjaman = DB::table('peminjaman')->get();
+        $peminjaman = Peminjaman::all();
         return view('peminjaman.index', ['peminjaman' => $peminjaman]);
     }
-
+ 
     /**
      * Show the form for creating a new resource.
      *

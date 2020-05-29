@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Daftar Peminjaman Buku</title>
+    <title>Daftar Pengembalian Buku</title>
   </head>
   <body>
 
@@ -30,40 +30,18 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col-7">
                     <h1 class="mt-3">Daftar Pengembalian Buku</h1>
 
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">NIM</th>
-                                <th scope="col">Judul Buku</th>
-                                <th scope="col">Nama Penerbit</th>
-                                <th scope="col">Tanggal Pengembalian</th>
-                                <th scope="col">Tindakan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach( $pengembalian as $pngmb )
-                            <tr>
-                                <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $pmjmn->nama }}</td>
-                                <td>{{ $pmjmn->username }}</td>
-                                <td>{{ $pmjmn->nim }}</td>
-                                <td>{{ $pmjmn->judul_buku }}</td>
-                                <td>{{ $pmjmn->penerbit }}</td>
-                                <td>{{ $pmjmn->tgl_pengembalian }}</td>
-                                <td>
-                                    <a href="" class="badge badge-success">edit</a>
-                                    <a href="" class="badge badge-danger">delete</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    <ul class="list-group">
+                      @foreach( $pengembalian as $pngmbln )
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            {{ $pngmbln->nama }}
+                            {{ $pngmbln->tgl_pengembalian }}
+                            <a href="/pengembalian/1" badge badge-dark>detail</a>
+                        </li>
+                      @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

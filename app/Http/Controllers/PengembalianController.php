@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Pengembalian;
 use Illuminate\Http\Request;
 
-class PengembaliansController-r extends Controller
+class PengembalianController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class PengembaliansController-r extends Controller
      */
     public function index()
     {
-        //
+        $pengembalian = Pengembalian::all();
+        return view('pengembalian.index', ['pengembalian' => $pengembalian]);
     }
 
     /**
@@ -44,9 +45,9 @@ class PengembaliansController-r extends Controller
      * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function show(Pengembalian $pengembalian)
+    public function show(Pengembalian $pngmbln)
     {
-        //
+        return $pngmbln;
     }
 
     /**
