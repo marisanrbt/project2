@@ -37,21 +37,23 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //$peminjaman = new Peminjaman;
-        //$peminjaman->nama = $request->nama;
-        //$peminjaman->username = $request->username;
-        //$peminjaman->nim = $request->nim;
-        //$peminjaman->judul_buku = $request->judul_buku;
-        //$peminjaman->penerbit = $request->penerbit;
+        $peminjaman = new Peminjaman;
+        $peminjaman->nama = $request->nama;
+        $peminjaman->username = $request->username;
+        $peminjaman->nim = $request->nim;
+        $peminjaman->judul_buku = $request->judul_buku;
+        $peminjaman->penerbit = $request->penerbit;
 
+
+        $peminjaman->save();
         //$student->save();
-        Peminjaman::create([
-            'nama' => $request->nama,
-            'username' => $request->username,
-            'nim' => $request->nim,
-            'judul_buku' => $request->judul_buku,
-            'penerbit' => $request->penerbit
-        ]);
+        //Peminjaman::create([
+          //  'nama' => $request->nama,
+            //'username' => $request->username,
+            //'nim' => $request->nim,
+            //'judul_buku' => $request->judul_buku,
+            //'penerbit' => $request->penerbit
+        //]);
 
         return redirect('/peminjaman');
     }

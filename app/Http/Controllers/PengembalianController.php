@@ -25,7 +25,7 @@ class PengembalianController extends Controller
      */
     public function create()
     {
-        //
+        return view('pengembalian.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class PengembalianController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return $request;
     }
 
     /**
@@ -47,7 +47,7 @@ class PengembalianController extends Controller
      */
     public function show(Pengembalian $pngmbln)
     {
-        return $pngmbln;
+        //return view('pengembalian.show', ['pengembalian' => $pngmbln]);
     }
 
     /**

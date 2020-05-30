@@ -14,17 +14,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-8">
-                    <h1 class="mt-3">Form Peminjaman Buku</h1>
+                    <h1 class="mt-3">Form Pengembalian Buku</h1>
                
-                    <form method="post" action="/peminjaman">
+                    <form method="post" action="/pengembalian">
                         @csrf
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control" id="nama" placeholder="Nama Panjang">
-                        </div>
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Masukkan Username">
                         </div>
                         <div class="form-group">
                             <label for="nim">NIM</label>
@@ -39,9 +35,10 @@
                             <input type="text" class="form-control" id="nama_penerbit" placeholder="Masukkan Nama Penerbit">
                         </div>
                         <div class="form-group">
-                            <label for="penerbit">Tanggal Peminjaman</label>
-                            <input type="text" class="form-control" id="tgl_peminjaman" placeholder="yyyy-mm-dd">
+                            <label for="penerbit">Tanggal Pengembalian</label>
+                            <input type="text" class="form-control" id="nama_penerbit" placeholder="yyyy-mm-dd">
                         </div>
+                        <div class=>
                         <button type="submit" class="btn btn-primary">Selesai</button>
                     </form>    
 

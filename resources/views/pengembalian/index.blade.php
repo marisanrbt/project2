@@ -33,15 +33,23 @@
                 <div class="col-7">
                     <h1 class="mt-3">Daftar Pengembalian Buku</h1>
 
-                    <ul class="list-group">
+                    <a href="/pengembalian/create" class="btn btn-info my-3">Form Pengembalian Buku</a>
+
                       @foreach( $pengembalian as $pngmbln )
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            {{ $pngmbln->nama }}
-                            {{ $pngmbln->tgl_pengembalian }}
-                            <a href="/pengembalian/1" badge badge-dark>detail</a>
-                        </li>
+                        <div class="dropdown" col-7>
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{ $pngmbln->nama }}
+                                {{ $pngmbln->tgl_pengembalian }}
+                            </button>
+                            <div class="dropdown-menu p-4 text-muted" style="max-width: 600px;">
+                                <p> Nama: {{ $pngmbln->nama }} </p>
+                                <p> Nim: {{ $pngmbln->nim }} </p>
+                                <p> Judul Buku: {{ $pngmbln->judul_buku }} </p>
+                                <p> Penerbit: {{ $pngmbln->penerbit }} </p>
+                                <p> Tanggal Pengembalian: {{ $pngmbln->tgl_pengembalian }} </p>
+                            </div>
+                        </div>
                       @endforeach
-                    </ul>
                 </div>
             </div>
         </div>

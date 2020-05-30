@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', function () {
-  //  return view('navbar');
+  //  return view('weblogin');
 //});
 
 //Route::get('/pengembalian', function () {
 //    return view('pengembalian');
 //});
 
-//Route::get('/peminjaman', function () {
-//    return view('peminjaman');
-//});
+Route::get('/peminjaman', function () {
+    return view('peminjaman');
+});
 
 Route::get('/', 'PagesController@beranda');
 
@@ -32,4 +32,6 @@ Route::get('/peminjaman/create', 'PeminjamanController@create');
 Route::post('/peminjaman', 'PeminjamanController@store');
 
 Route::get('/pengembalian', 'PengembalianController@index');
+Route::get('/pengembalian/create', 'PengembalianController@create');
 Route::get('/pengembalian/{pngmbln}', 'PengembalianController@show');
+Route::post('/pegembalian', 'PengembaliannController@store');

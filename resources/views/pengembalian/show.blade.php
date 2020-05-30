@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <title>Daftar Peminjaman Buku</title>
+    <title>Daftar Pengembalian Buku</title>
   </head>
   <body>
 
@@ -30,42 +30,19 @@
 
         <div class="container">
             <div class="row">
-                <div class="col">
-                    <h1 class="mt-3">Daftar Peminjaman Buku</h1>
-               
-                    <a href="/peminjaman/create" class="btn btn-info my-3">Form Peminjaman Buku</a>
+                <div class="col-7">
+                    <h1 class="mt-3">Detail Pengembalian Buku</h1>
+                    
+                    <div class="dropdown-menu p-4 text-muted" style="max-width: 200px;">
+                        <p>
+                            Some example text that's free-flowing within the dropdown menu.
+                        </p>
+                        <p class="mb-0">
+                            And this is more example text.
+                        </p>
+                    </div>
 
-                    <table class="table">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th scope="col">No</th>
-                                <th scope="col">Nama</th>
-                                <th scope="col">Username</th>
-                                <th scope="col">NIM</th>
-                                <th scope="col">Judul Buku</th>
-                                <th scope="col">Nama Penerbit</th>
-                                <th scope="col">Tanggal Peminjaman</th>
-                                <th scope="col">Tindakan</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach( $peminjaman as $pmjmn )
-                            <tr>
-                                <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $pmjmn->nama }}</td>
-                                <td>{{ $pmjmn->username }}</td>
-                                <td>{{ $pmjmn->nim }}</td>
-                                <td>{{ $pmjmn->judul_buku }}</td>
-                                <td>{{ $pmjmn->penerbit }}</td>
-                                <td>{{ $pmjmn->created_at }}</td>
-                                <td>
-                                    <a href="" class="badge badge-success">edit</a>
-                                    <a href="" class="badge badge-danger">delete</a>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
+                    
                 </div>
             </div>
         </div>
