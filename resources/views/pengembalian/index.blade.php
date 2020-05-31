@@ -45,7 +45,7 @@
                                 <p> Nama: {{ $pngmbln->nama }} </p>
                                 <p> Nim: {{ $pngmbln->nim }} </p>
                                 <p> Judul Buku: {{ $pngmbln->judul_buku }} </p>
-                                <p> Penerbit: {{ $pngmbln->penerbit }} </p>
+                                <p> Penerbit: {{ $pngmbln->nama_penerbit }} </p>
                                 <p> Tanggal Pengembalian: {{ $pngmbln->created_at }} </p>
                             </div>
                         </div>

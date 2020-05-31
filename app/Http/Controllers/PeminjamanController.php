@@ -46,14 +46,7 @@ class PeminjamanController extends Controller
 
 
         //$peminjaman->save();
-        Loaning::create([
-            'nama' => $request->nama,
-            'username' => $request->username,
-            'nim' => $request->nim,
-            'judul_buku' => $request->judul_buku,
-            'nama_penerbit' => $request->penerbit
-        ]);
-
+        Loaning::create($request->all());
         return redirect('/peminjaman');
     }
 
