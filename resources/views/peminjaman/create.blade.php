@@ -11,6 +11,23 @@
     <title>Form Peminjaman Buku</title>
   </head>
   <body>
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <div class="container">
+                <a class="navbar-brand" href="#">Perpustakaan IPB</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" href="/">Beranda</a>
+                        <a class="nav-item nav-link" href="/peminjaman">Peminjaman</a>
+                        <a class="nav-item nav-link" href="/pengembalian">Pengembalian</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
         <div class="container">
             <div class="row">
                 <div class="col-8">
@@ -20,27 +37,23 @@
                         @csrf
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Nama Panjang">
+                            <input type="text" class="form-control" id="nama" placeholder="Nama Panjang" name="nama">
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Masukkan Username">
+                            <input type="text" class="form-control" id="username" placeholder="Masukkan Username" name="username">
                         </div>
                         <div class="form-group">
                             <label for="nim">NIM</label>
-                            <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM">
+                            <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM" name="nim">
                         </div>
                         <div class="form-group">
                             <label for="judul_buku">Judul buku</label>
-                            <input type="text" class="form-control" id="judul_buku" placeholder="Masukkan Judul Buku">
+                            <input type="text" class="form-control" id="judul_buku" placeholder="Masukkan Judul Buku" name="judul_buku">
                         </div>
                         <div class="form-group">
                             <label for="penerbit">Nama Penerbit</label>
-                            <input type="text" class="form-control" id="nama_penerbit" placeholder="Masukkan Nama Penerbit">
-                        </div>
-                        <div class="form-group">
-                            <label for="penerbit">Tanggal Peminjaman</label>
-                            <input type="text" class="form-control" id="tgl_peminjaman" placeholder="yyyy-mm-dd">
+                            <input type="text" class="form-control" id="nama_penerbit" placeholder="Masukkan Nama Penerbit" name="nama_penerbit">
                         </div>
                         <button type="submit" class="btn btn-primary">Selesai</button>
                     </form>    

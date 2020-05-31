@@ -14,15 +14,15 @@
 
         <nav class="navbar navbar-expand-lg navbar-light bg-info">
             <div class="container">
-                <a class="navbar-brand" href="#">Perpustakaan IPB</a>
+                <a class="navbar-brand mb-0 h1" href="{{ url('/') }}">Perpustakaan IPB</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="/">Beranda</a>
-                        <a class="nav-item nav-link" href="/peminjaman">Peminjaman</a>
-                        <a class="nav-item nav-link" href="/pengembalian">Pengembalian</a>
+                        <a class="nav-item nav-link active" href="{{ url('/') }}">Beranda</a>
+                        <a class="nav-item nav-link" href="{{ url('/peminjaman') }}">Peminjaman</a>
+                        <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">Pengembalian</a>
                     </div>
                 </div>
             </div>
@@ -39,14 +39,14 @@
                         <div class="dropdown" col-7>
                             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 {{ $pngmbln->nama }}
-                                {{ $pngmbln->tgl_pengembalian }}
+                                {{ $pngmbln->created_at }}
                             </button>
                             <div class="dropdown-menu p-4 text-muted" style="max-width: 600px;">
                                 <p> Nama: {{ $pngmbln->nama }} </p>
                                 <p> Nim: {{ $pngmbln->nim }} </p>
                                 <p> Judul Buku: {{ $pngmbln->judul_buku }} </p>
                                 <p> Penerbit: {{ $pngmbln->penerbit }} </p>
-                                <p> Tanggal Pengembalian: {{ $pngmbln->tgl_pengembalian }} </p>
+                                <p> Tanggal Pengembalian: {{ $pngmbln->created_at }} </p>
                             </div>
                         </div>
                       @endforeach

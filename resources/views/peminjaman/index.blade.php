@@ -56,11 +56,11 @@
                                 <td>{{ $pmjmn->username }}</td>
                                 <td>{{ $pmjmn->nim }}</td>
                                 <td>{{ $pmjmn->judul_buku }}</td>
-                                <td>{{ $pmjmn->penerbit }}</td>
+                                <td>{{ $pmjmn->nama_penerbit }}</td>
                                 <td>{{ $pmjmn->created_at }}</td>
                                 <td>
-                                    <a href="" class="badge badge-success">edit</a>
-                                    <a href="" class="badge badge-danger">delete</a>
+                                    <button type="submit" class="badge badge-success">edit</a>
+                                    <button type="submit" class="badge badge-danger">delete</a>
                                 </td>
                             </tr>
                             @endforeach

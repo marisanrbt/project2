@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use App\Peminjaman;
+use App\Loaning;
 
 class PeminjamanController extends Controller
 {
@@ -15,7 +15,7 @@ class PeminjamanController extends Controller
      */
     public function index()
     {
-        $peminjaman = Peminjaman::all();
+        $peminjaman = Loaning::all();
         return view('peminjaman.index', ['peminjaman' => $peminjaman]);
     }
  
@@ -37,23 +37,22 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        $peminjaman = new Peminjaman;
-        $peminjaman->nama = $request->nama;
-        $peminjaman->username = $request->username;
-        $peminjaman->nim = $request->nim;
-        $peminjaman->judul_buku = $request->judul_buku;
-        $peminjaman->penerbit = $request->penerbit;
+        //$pmjmn = new peminjaman;
+        //$pmjmn->nama = $request->nama;
+        //$pmjmn->username = $request->username;
+        //$pmjmn->nim = $request->nim;
+        //$pmjmn->judul_buku = $request->judul_buku;
+        //$pmjmn->penerbit = $request->penerbit;
 
 
-        $peminjaman->save();
-        //$student->save();
-        //Peminjaman::create([
-          //  'nama' => $request->nama,
-            //'username' => $request->username,
-            //'nim' => $request->nim,
-            //'judul_buku' => $request->judul_buku,
-            //'penerbit' => $request->penerbit
-        //]);
+        //$peminjaman->save();
+        Loaning::create([
+            'nama' => $request->nama,
+            'username' => $request->username,
+            'nim' => $request->nim,
+            'judul_buku' => $request->judul_buku,
+            'nama_penerbit' => $request->penerbit
+        ]);
 
         return redirect('/peminjaman');
     }

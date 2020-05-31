@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Pengembalian;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Returning;
 
 class PengembalianController extends Controller
 {
@@ -14,7 +15,7 @@ class PengembalianController extends Controller
      */
     public function index()
     {
-        $pengembalian = Pengembalian::all();
+        $pengembalian = Returning::all();
         return view('pengembalian.index', ['pengembalian' => $pengembalian]);
     }
 

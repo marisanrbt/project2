@@ -34,4 +34,4 @@ Route::post('/peminjaman', 'PeminjamanController@store');
 Route::get('/pengembalian', 'PengembalianController@index');
 Route::get('/pengembalian/create', 'PengembalianController@create');
 Route::get('/pengembalian/{pngmbln}', 'PengembalianController@show');
-Route::post('/pegembalian', 'PengembaliannController@store');
+Route::post('/pegembalian', 'PengembalianController@store');
