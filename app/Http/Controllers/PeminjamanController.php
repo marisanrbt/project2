@@ -37,19 +37,26 @@ class PeminjamanController extends Controller
      */
     public function store(Request $request)
     {
-        //$pmjmn = new peminjaman;
-        //$pmjmn->nama = $request->nama;
-        //$pmjmn->username = $request->username;
-        //$pmjmn->nim = $request->nim;
-        //$pmjmn->judul_buku = $request->judul_buku;
-        //$pmjmn->penerbit = $request->penerbit;
-
-
-        //$peminjaman->save();
+        
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'username' => 'required',
+            'nim' => 'required|size9',
+            'judul_buku' => 'required',
+            'nama_penerbit' => 'required',
+            ]);
+        
         Loaning::create($request->all());
-        return redirect('/peminjaman');
+        return redirect('/peminjaman')->with('status', 'Anda berhasil melakukan peminjaman buku.');
     }
 
+    public function messages()
+    {
+        return [
+            'title.required' => 'A title is required',
+            'body.required'  => 'A message is required',
+        ];
+    }
     /**
      * Display the specified resource.
      *

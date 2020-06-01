@@ -37,23 +37,28 @@
                         @csrf
                         <div class="form-group">
                             <label for="nama">Nama</label>
-                            <input type="text" class="form-control" id="nama" placeholder="Nama Panjang" name="nama">
+                            <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Nama Panjang" name="nama">
+                            @error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Masukkan Username" name="username">
+                            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Masukkan Username" name="username">
+                            @error('username')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="nim">NIM</label>
-                            <input type="text" class="form-control" id="nim" placeholder="Masukkan NIM" name="nim">
+                            <input type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" placeholder="Masukkan NIM" name="nim">
+                            @error('nim')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="judul_buku">Judul buku</label>
-                            <input type="text" class="form-control" id="judul_buku" placeholder="Masukkan Judul Buku" name="judul_buku">
+                            <input type="text" class="form-control @error('judul_buku') is-invalid @enderror" id="judul_buku" placeholder="Masukkan Judul Buku" name="judul_buku">
+                            @error('judul_buku')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="form-group">
-                            <label for="penerbit">Nama Penerbit</label>
-                            <input type="text" class="form-control" id="nama_penerbit" placeholder="Masukkan Nama Penerbit" name="nama_penerbit">
+                            <label for="nama_penerbit">Nama Penerbit</label>
+                            <input type="text" class="form-control @error('nama_penerbit') is-invalid @enderror" id="nama_penerbit" placeholder="Masukkan Nama Penerbit" name="nama_penerbit">
+                            @error('nama_penerbit')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <button type="submit" class="btn btn-primary">Selesai</button>
                     </form>    

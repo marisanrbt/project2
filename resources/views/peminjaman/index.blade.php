@@ -32,8 +32,14 @@
             <div class="row">
                 <div class="col">
                     <h1 class="mt-3">Daftar Peminjaman Buku</h1>
-               
+
                     <a href="/peminjaman/create" class="btn btn-info my-3">Form Peminjaman Buku</a>
+
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{ session('status') }}
+                        </div>
+                    @endif
 
                     <table class="table">
                         <thead class="thead-dark">
