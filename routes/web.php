@@ -16,11 +16,6 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
   //  return view('weblogin');
 //});
-
-//Route::get('/pengembalian', function () {
-//    return view('pengembalian');
-//});
-
 Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
@@ -30,6 +25,10 @@ Route::get('/', 'PagesController@beranda');
 Route::get('/peminjaman', 'PeminjamanController@index');
 Route::get('/peminjaman/create', 'PeminjamanController@create');
 Route::post('/peminjaman', 'PeminjamanController@store');
+Route::delete('/peminjaman/{pmjmn}', 'PeminjamanController@destroy');
+Route::get('/peminjaman/{pmjmn}/edit', 'PeminjamanController@edit');
+Route::patch('/peminjaman/{pmjmn}', 'PeminjamanController@update');
+//Route::resource('peminjaman', 'PeminjamanController');
 
 Route::get('/pengembalian', 'PengembalianController@index');
 Route::get('/pengembalian/create', 'PengembalianController@create');

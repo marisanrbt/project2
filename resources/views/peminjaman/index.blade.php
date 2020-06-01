@@ -65,8 +65,12 @@
                                 <td>{{ $pmjmn->nama_penerbit }}</td>
                                 <td>{{ $pmjmn->created_at }}</td>
                                 <td>
-                                    <button type="submit" class="badge badge-success">edit</a>
-                                    <button type="submit" class="badge badge-danger">delete</a>
+                                    <a href="/peminjaman/{{ $pmjmn->id }}/edit" class="btn btn-success">edit</a>
+                                    <form action="{{ $pmjmn -> id }}" method="post">
+                                        @method('delete')
+                                        @csrf
+                                        <button type="submit" class="btn btn-danger">delete</a>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

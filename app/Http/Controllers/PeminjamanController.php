@@ -74,9 +74,9 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Loaning $pmjmn)
     {
-        //
+        return view('peminjaman.edit', compact('pmjmn'));
     }
 
     /**
@@ -86,9 +86,26 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Loaning $pmjmn)
     {
-        //
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'username' => 'required',
+            'nim' => 'required|size9',
+            'judul_buku' => 'required',
+            'nama_penerbit' => 'required',
+        ]);
+        
+        
+        Loaning::where('id', $pmjmn->id)
+                ->update([
+                    'nama' => $request->nama,
+                    'username' => $request->username,
+                    'nim' => $request->nim,
+                    'judul_buku' => $request->judul_buku,
+                    'nama_penerbit' => $request->nama_penerbit
+                ]);
+        return redirect('/peminjaman')->with('status', 'Anda berhasil mengubah data.');
     }
 
     /**
@@ -97,8 +114,9 @@ class PeminjamanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Loaning $pmjmn)
     {
-        //
+        Loaning::destroy($pmjmn -> id);
+        return redirect('/peminjaman')->with('status', 'Anda berhasil menghapus data.');
     }
 }
