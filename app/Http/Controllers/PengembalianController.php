@@ -37,7 +37,15 @@ class PengembalianController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        $validatedData = $request->validate([
+            'nama' => 'required',
+            'nim' => 'required|size9',
+            'judul_buku' => 'required',
+            'nama_penerbit' => 'required',
+            ]);
+        
+        Returning::create($request->all());
+        return redirect('/peminjaman')->with('status', 'Anda berhasil melakukan pengembalian buku.');
     }
 
     /**

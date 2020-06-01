@@ -38,7 +38,7 @@
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Nama Panjang" name="nama" value="{{ old('nama') }}">
-                            @error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            @error('nama')<div class="invalid-feedback">Nama tidak boleh kosong</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="username">Username</label>

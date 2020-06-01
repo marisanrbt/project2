@@ -32,5 +32,4 @@ Route::patch('/peminjaman/{pmjmn}', 'PeminjamanController@update');
 
 Route::get('/pengembalian', 'PengembalianController@index');
 Route::get('/pengembalian/create', 'PengembalianController@create');
-Route::get('/pengembalian/{pngmbln}', 'PengembalianController@show');
 Route::post('/pegembalian', 'PengembalianController@store');

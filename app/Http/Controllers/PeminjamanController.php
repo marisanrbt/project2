@@ -41,7 +41,7 @@ class PeminjamanController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'username' => 'required',
-            'nim' => 'required|size9',
+            'nim' => 'required|size:9',
             'judul_buku' => 'required',
             'nama_penerbit' => 'required',
             ]);
@@ -91,7 +91,7 @@ class PeminjamanController extends Controller
         $validatedData = $request->validate([
             'nama' => 'required',
             'username' => 'required',
-            'nim' => 'required|size9',
+            'nim' => 'required|size:9',
             'judul_buku' => 'required',
             'nama_penerbit' => 'required',
         ]);
