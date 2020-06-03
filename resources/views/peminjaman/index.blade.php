@@ -66,7 +66,7 @@
                                 <td>{{ $pmjmn->created_at }}</td>
                                 <td>
                                     <a href="/peminjaman/{{ $pmjmn->id }}/edit" class="btn btn-success">edit</a>
-                                    <form action="{{ $pmjmn -> id }}" method="post" class="d-inline">
+                                    <form action="/peminjaman/{{ $pmjmn -> id }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger">delete</a>
