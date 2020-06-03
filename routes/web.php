@@ -14,22 +14,42 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route::get('/', function () {
-  //  return view('weblogin');
-//});
-Route::get('/peminjaman', function () {
-    return view('peminjaman');
-});
+  //  return view('welcome');
+  //});
 
-Route::get('/', 'PagesController@beranda');
+  //Route::get('/peminjaman', function () {
+  //  return view('peminjaman');
+  //});
+  
+  Route::get('/', 'PagesController@beranda');
+  
+  Route::get('/peminjaman', 'PeminjamanController@index');
+  Route::get('/peminjaman/create', 'PeminjamanController@create');
+  Route::post('/peminjaman', 'PeminjamanController@store');
+  Route::delete('/peminjaman/{pmjmn}', 'PeminjamanController@destroy');
+  Route::get('/peminjaman/{pmjmn}/edit', 'PeminjamanController@edit');
+  Route::patch('/peminjaman/{pmjmn}', 'PeminjamanController@update');
+  //Route::resource('peminjaman', 'PeminjamanController');
+  
+  Route::get('/pengembalian', 'PengembalianController@index');
+  Route::get('/pengembalian/{pngmbln}/formpengembalian', 'PengembalianController@create');
+  Route::post('/pengembalian', 'PengembalianController@store');
+  
+  Auth::routes();
+  
+  Route::get('/home', 'HomeController@index')->name('home');
+  Auth::routes();
+  
+  Route::get('/home', 'HomeController@index')->name('home');
+  
+  Auth::routes();
+  
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/peminjaman', 'PeminjamanController@index');
-Route::get('/peminjaman/create', 'PeminjamanController@create');
-Route::post('/peminjaman', 'PeminjamanController@store');
-Route::delete('/peminjaman/{pmjmn}', 'PeminjamanController@destroy');
-Route::get('/peminjaman/{pmjmn}/edit', 'PeminjamanController@edit');
-Route::patch('/peminjaman/{pmjmn}', 'PeminjamanController@update');
-//Route::resource('peminjaman', 'PeminjamanController');
+Auth::routes();
 
-Route::get('/pengembalian', 'PengembalianController@index');
-Route::get('/pengembalian/create', 'PengembalianController@create');
-Route::post('/pegembalian', 'PengembalianController@store');
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

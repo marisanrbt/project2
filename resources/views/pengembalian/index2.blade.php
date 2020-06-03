@@ -36,51 +36,49 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="mt-3">Daftar Peminjaman Buku</h1>
-
-                    <a href="/peminjaman/create" class="btn btn-info my-3">Form Peminjaman Buku</a>
-
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+                    <h1 class="mt-3">Cek Daftar Pengembalian Buku</h1>
 
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Username</th>
                                 <th scope="col">NIM</th>
                                 <th scope="col">Judul Buku</th>
                                 <th scope="col">Nama Penerbit</th>
                                 <th scope="col">Tanggal Peminjaman</th>
+                                <th scope="col">Status</th>
                                 <th scope="col">Tindakan</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach( $peminjaman as $pmjmn )
+                            @foreach( $pengembalian as $pngmbln )
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
-                                <td>{{ $pmjmn->nama }}</td>
-                                <td>{{ $pmjmn->username }}</td>
-                                <td>{{ $pmjmn->nim }}</td>
-                                <td>{{ $pmjmn->judul_buku }}</td>
-                                <td>{{ $pmjmn->nama_penerbit }}</td>
-                                <td>{{ $pmjmn->tgl_pinjam }}</td>
+                                <td>{{ $pngmbln->nama }}</td>
+                                <td>{{ $pngmbln->nim }}</td>
+                                <td>{{ $pngmbln->judul_buku }}</td>
+                                <td>{{ $pngmbln->nama_penerbit }}</td>
+                                <td>{{ $pngmbln->tgl_pinjam}}</td>
                                 <td>
-                                    <a href="/peminjaman/{{ $pmjmn->id }}/edit" class="btn btn-success">edit</a>
-                                    <form action="/peminjaman/{{ $pmjmn -> id }}" method="post" class="d-inline">
-                                        @method('delete')
-                                        @csrf
-                                        <button type="submit" class="btn btn-danger">delete</a>
-                                    </form>
+                                    @if($pngmbln->tgl_kembali == null)
+                                    <p>Belum Dikembalikan</p>
+                                    @else
+                                        <p>Telah Dikembalikan</p>
+                                    @endif</td>
+                                <td>
+                                    <a href="/pengembalian/{{ $pngmbln->id }}/formpengembalian" class="btn btn-success">Pengembalian</a>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+
+                    @if (session('status'))
+                        <div class="alert alert-success">
+                            {{session('status')}}
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
@@ -97,15 +95,14 @@
         $( document ).ready(function() {
 
             console.log( "ready!" );
-            var myDate = new Date(); var date =myDate.getFullYear() + '-' + ("0" +(parseInt(myDate.getMonth()) + 1)) + '-' + ('0'+ myDate.getDate()).slice(-2)  ;
-        
+            var myDate = new Date(); 
+            var date =myDate.getFullYear() + '-' + ("0" +(parseInt(myDate.getMonth()) + 1)) + '-' + ('0'+ myDate.getDate()).slice(-2)  ;
+            
             $("#datepicker").val(date); 
         });
 
         $('#datepicker').datepicker({
-            "setDate": new Date(),
-            "autoclose": true,
-            dateFormat: 'yy-mm-dd'
+            dateFormat: 'dd-mm-yy'
         });
     </script>
 
