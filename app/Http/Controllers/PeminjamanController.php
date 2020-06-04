@@ -103,8 +103,8 @@ class PeminjamanController extends Controller
                     'username' => $request->username,
                     'nim' => $request->nim,
                     'judul_buku' => $request->judul_buku,
-                    'nama_penerbit' => $request->nama_penerbit
-                ]);
+                    'nama_penerbit' => $request->nama_penerbit,
+                    ]);
         return redirect('/peminjaman')->with('status', 'Anda berhasil mengubah data.');
     }
 

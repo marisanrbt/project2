@@ -25,8 +25,8 @@ class PengembalianController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
-        return view('pengembalian.create');
+    {  
+        return redirect('/pengembalian')->with('status', 'Anda berhasil melakukan pengembalian buku.');
     }
 
     /**
@@ -37,15 +37,8 @@ class PengembalianController extends Controller
      */
     public function store(Request $request)
     {
-        $validatedData = $request->validate([
-            'nama' => 'required',
-            'nim' => 'required|size9',
-            'judul_buku' => 'required',
-            'nama_penerbit' => 'required',
-            ]);
-        
         Returning::create($request->all());
-        return redirect('/peminjaman')->with('status', 'Anda berhasil melakukan pengembalian buku.');
+        return redirect('/pengembalian')->with('status', 'Anda berhasil melakukan pengembalian buku.');
     }
 
     /**
@@ -65,9 +58,9 @@ class PengembalianController extends Controller
      * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function edit(Pengembalian $pengembalian)
+    public function edit(Returning $pngmbln)
     {
-        //
+        return view('pengembalian.edit', compact('pngmbln'));
     }
 
     /**
@@ -77,9 +70,17 @@ class PengembalianController extends Controller
      * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pengembalian $pengembalian)
+    public function update(Request $request, Pengembalian $pngmbln)
     {
-        //
+        $validatedData = $request->validate([
+            'tgl_kembali' => 'required'
+        ]);
+        
+        Loaning::where('id', $pngmbln->id)
+                ->update([
+                    'tgl_kembali' => $request->tgl_kembali,
+                    ]);
+        return redirect('/pengembalian')->with('status', 'Anda berhasil mengembalikan buku.');
     }
 
     /**
