@@ -1,79 +1,57 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Perpustakaan IPB
+Requirements
+Pls install this requirements before
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+XAMPP
+Composer
+Git
+Text Editor (Notepad++ or Visual Studio Code or sublime, etc)
+Bagaimana cara menggunakan repository ini?
+Git clone project ini, Clone repository ada 2 cara :
+Cara pertama. Download langsung saja raw dari repository nya berupa .zip Untitled
+Cara kedua. Dianjurkan menggunakan yang ini. Buka Git Bash pada folder kalian untuk project ini. setelah itu masukkan perintah git clone https://github.com/marisanrbt/project2.git
+like this
 
-## About Laravel
+Note : Pastikan kalian telah memiliki akun Github juga
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Nyalakan XAMPP nya
+Xammp
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Setelah itu buka project yang telah kalian clone mneggunakan text editor kalian. yang akan saya contohkan menggunakan visual studio code. Buka terminal
+terminal
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
-- [云软科技](http://www.yunruan.ltd/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Masukkan perintah composer install . Pada step ini membutuhkan koneksi internet
+Jika sudah berhasil masukkan perintah php artisan migrate. Fungsi ini untuk secara otomatis membuat database di XAMPP kalian
+Happy Coding!
+Cara lihat hasil kodingannya gimana ya?
+Buka terminal
+Ketikkan perintah php artisan serve
+Buka broser kalian, buka localhost:8000
+Saya mau ngoding, tapi nanti setelah selesai dan saya push saya akan menimpah kerjaan teman saya dong? bagaimana cara agar tidak mengacaukannya?
+Ketika kalian clone dari master usahakan bikin branch baru.
+Caranya setelah kalian clone buka terminal pada repository tersebut (bisa menggunakan visual studio code), lalu masukkan perintah git checkout -b [nama branch]
+Untuk mengecek kalian sudah pindah ke branch kalian atau belum ketikkan git branch
+Happy Coding!
+Setelah saya ngoding di branch saya, saya mau menggabungkan code saya dengan yang dibranch MASTER. Bagaimana caranya?
+Check nama branch kalian dengan cara ketikkan git branch di terminal
+Git add, git commit, dan git push dulu kerjaan kalian ke branch baru kalian. Caranya buka terminal lalu:
+Git add .
+Git commit -m '[masukkan info apa yang kalian coding]
+`Git push origin [nama branch kalian]'
+Setelah itu pull branch master dengan kodingan terbaru
+Git pull dulu branch masternya, check kalian sedang di branch mana terlebih dahulu git branch. Jika kalian berada di branch pribadi dan bukan di master, cara pindahnya ke branch master dengan cara mengetikkan git checkout master lalu kalian dapat check lagi dengan perintah git branch. Setelah itu git pull dengan cara mengetikkan git pull origin master
+Buka github di browser, lalu pilih pull request. tekan tombol new pull request.
+Jangan lupa tambahkan assigness ketika pull request agar teman kalain mengetahui ada perubahan apa yang akan masuk ke branch master
+Ketika saya pull request ada conflict bagaimana ya?
+Buka project kalian di terminal
+Pindah ke branch master dengan cara mengetikkan git checkout master
+Git pull pada branch master dengan mengetikkan git pull
+kembali ke branch pribadi kalian dengna cara mengetikkan perintah `git checkout [nama branch kalian]'
+Check sudah di branch pribadi atau blom dengan mengetikkan git branch
+samakan kodingan di branch pribadi kita dengan branch master. caranya yaitu dengan mengetikkan git rebase master
+Jika ada conflict perbaiki terlebih dahulu, pada bagian tersebut kodingannya yg bener yang mana
+Jika sudah benar. buka terminal lalu :
+Git add .
+Git commit -m '[masukkan info apa yang kalian coding]
+`Git push origin [nama branch kalian] -f'
+Buka pull request lagi, lalu new request dan cek apakah masih ada conflict atau tdk, harusnya si tidak ada.
