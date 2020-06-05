@@ -1,7 +1,7 @@
 # Perpustakaan IPB
 
 ### Requirements
-**Pls install this requirements before**
+Pastiin udah ada 4 aplikasi ini yaa guyss. Untuk teks editornya aku saranin pake visual code
 
 1. [XAMPP](https://www.apachefriends.org/index.html)
 2. [Composer](https://getcomposer.org/Composer-Setup.exe)
@@ -11,30 +11,39 @@
 ### Bagaimana cara menggunakan repository ini?
 
 1. Git clone project ini, Clone repository ada 2 cara :
-   - Cara pertama. Download langsung saja raw dari repository nya berupa .zip
+   - Cara pertama. Download langsung aja raw dari repository nya berupa .zip
 ![Untitled](https://user-images.githubusercontent.com/34140863/83843800-f5f50b00-a72f-11ea-83ba-05c18bd8115f.png)
    - Cara kedua. **Dianjurkan menggunakan yang ini**. Buka Git Bash pada folder kalian untuk project ini. setelah itu masukkan perintah `git clone https://github.com/marisanrbt/project2.git`
    
 ![like this](https://user-images.githubusercontent.com/34140863/83843423-21c3c100-a72f-11ea-8273-e78bb1562e7c.png)
    
-   **Note :** Pastikan kalian telah memiliki akun Github juga
+   **Btw harus punya akun github juga ya
  
 2. Nyalakan XAMPP nya 
 
 ![Xammp](https://user-images.githubusercontent.com/34140863/83844414-24271a80-a731-11ea-8439-f936ddd143e6.png)
 
-3. Setelah itu buka project yang telah kalian clone mneggunakan text editor kalian. yang akan saya contohkan menggunakan visual studio code. Buka terminal
+3. Setelah itu buka project yang udah di clone dengan text editor kalian. Aku disini pakai visual studio code. Buka terminal
 
 ![terminal](https://user-images.githubusercontent.com/34140863/83844351-05288880-a731-11ea-9253-89c6632b28b4.png)
 
-4. Masukkan perintah `composer install` . Pada step ini membutuhkan koneksi internet
-5. Jika sudah berhasil masukkan perintah `php artisan migrate`. Fungsi ini untuk secara otomatis membuat database di XAMPP kalian
-6. Happy Coding!
+4. Masukkan perintah `composer install` . Pastikan ada koneksi internet ya guysss
+5. Kalau sudah berhasil masukkan perintah `php artisan migrate`. Fungsi ini untuk secara otomatis membuat database di XAMPP kalian
+6. Selamat mencobaa!!
 
-### Cara lihat hasil kodingannya gimana ya?
+### Cara lihat hasil kodingannya gimana?
 1. Buka terminal
 2. Ketikkan perintah `php artisan serve`
 3. Buka broser kalian, buka [localhost:8000](http://localhost:8000/)
+
+ATAU
+
+Bisa juga buka lewat git. Caranya:
+1. Buka git
+2. Ketik 'cd /c/xampp/htdocs/tugasakhir'
+3. Ketikkan perintah `php artisan serve`
+4. Buka broser kalian, buka [localhost:8000](http://localhost:8000/)
+5. Voilaaa! jalan pasti kodingannyaa wkwkw
 
 ### Saya mau ngoding, tapi nanti setelah selesai dan saya push saya akan menimpah kerjaan teman saya dong? bagaimana cara agar tidak mengacaukannya?
 
