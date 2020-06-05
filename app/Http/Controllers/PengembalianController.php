@@ -76,11 +76,11 @@ class PengembalianController extends Controller
             'tgl_kembali' => 'required'
         ]);
         
-        Loaning::where('id', $pngmbln->id)
+        Returning::where('id', $pngmbln->id)
                 ->update([
                     'tgl_kembali' => $request->tgl_kembali,
                     ]);
-        return redirect('/pengembalian')->with('status', 'Anda berhasil mengembalikan buku.');
+        return redirect('/pengembalian')->with('status', 'Anda berhasil mengubah data.');
     }
 
     /**

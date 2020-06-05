@@ -4,97 +4,96 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Perpustakaan | IPB</title>
+        <title>Perpustakaan IPB</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <style type="text/css">
+        body{
+            background-color: #b0c4de;
+            color: #191970;
+            font-size: 20px;
+            font-family: 'Nunito', sans-serif;
+            font-weight: 200;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .full-height {
-                height: 100vh;
-            }
+        #utama{
+            Width: 300px;
+            margin: 0 auto;
+            margin-top: 12%;
+            background-color: #b0c4de;
+        }
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+        #judul{
+            padding: 15px;
+            text-align: center;
+            color: #b0c4de;
+            font-size: 20px;
+            background-color: #000080;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            border-bottom: 3px solid #808080;
+        }
 
-            .position-ref {
-                position: relative;
-            }
+        #data{
+            background-color: #dcdcdc;
+            padding: 20px;
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+        input{
+            padding: 8px;
+            border: 0;
+        }
 
-            .content {
-                text-align: center;
-            }
+        .content{
+            text-align: center;
+        }
+        .lebar{
+            width: 243px;
+        }
+        .tombol{
+            background-color: #808080;
+            border-radius: 3px;
+            text-align: center;
+            color: #fff
+        }
+        .tombol:hover{
+            background-color: #000090;
+        }
+        .tittle m-b-md{
+             margin-bottom: 30px;
+        }
 
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
         </style>
-    </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
+        <div class="content">
+            <div class="title m-b-md">
+                Selamat Datang di Perpustakaan IPB
+            </div>
 
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
+        <div id="utama">
+            <div id="judul" class="content">
+                Harap Login Untuk Masuk
+            </div>
 
-            <div class="content">
-                <div class="title m-b-md">
-                    Selamat Datang di Perpus IPB
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+            <div id="data" class="content">
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}" class="btn btn-success">{{ __('Login') }}</a>
+                </li>
+                    @if (Route::has('register'))
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('register') }}" class="btn btn-success" class="d_inline">{{ __('Register') }}</a>
+                        </li>
+                @endif
             </div>
         </div>
     </body>
+    </head>
 </html>

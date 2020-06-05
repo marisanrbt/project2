@@ -66,29 +66,20 @@ input{
 </head>
 <body>
 
-<div class="content">
-    <div class="title m-b-md">
-        Selamat Datang di Perpustakaan IPB
-    </div>
+<div class="flex-center position-ref full-height">
+            @if (Route::has('login'))
+                <div class="top-right links">
+                    @auth
+                        <a href="{{ url('/home') }}">Home</a>
+                    @else
+                        <a href="{{ route('login') }}">Login</a>
 
-<div id="utama">
-    <div id="judul" class="content">
-        Login Untuk Masuk
-    </div>
-
-    <div id="data" class="content">
-    <form action="" method="post">
-        <div>
-            <input type="text" name="user" placeholder="Username" class="lebar" />
-        </div>
-        <div style="margin-top:8px;">
-            <input type="password" name="pass" placeholder="Password" class="lebar" />
-        </div> 
-        <div style="margin-top:8px;">
-            <input type="submit" name="login" value="Login" class="tombol" />
-        </div>
-    </form>
-
+                        @if (Route::has('register'))
+                            <a href="{{ route('register') }}">Register</a>
+                        @endif
+                    @endauth
+                </div>
+            @endif
     <?php
     $user = @$_POST['user'];
     $pass = @$_POST['pass'];

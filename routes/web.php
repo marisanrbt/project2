@@ -12,16 +12,19 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
 
-//Route::get('/', function () {
-  //  return view('welcome');
-  //});
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
   //Route::get('/peminjaman', function () {
   //  return view('peminjaman');
   //});
   
-  Route::get('/', 'PagesController@beranda');
+  //Route::get('/', 'PagesController@beranda');
   
   Route::get('/peminjaman', 'PeminjamanController@index');
   Route::get('/peminjaman/create', 'PeminjamanController@create');
@@ -29,27 +32,8 @@ use Illuminate\Support\Facades\Route;
   Route::delete('/peminjaman/{pmjmn}', 'PeminjamanController@destroy');
   Route::get('/peminjaman/{pmjmn}/edit', 'PeminjamanController@edit');
   Route::patch('/peminjaman/{pmjmn}', 'PeminjamanController@update');
-  //Route::resource('peminjaman', 'PeminjamanController');
   
   Route::get('/pengembalian', 'PengembalianController@index');
-  Route::get('/pengembalian/{pngmbln}/formpengembalian', 'PengembalianController@create');
-  Route::post('/pengembalian', 'PengembalianController@store');
+  Route::get('/pengembalian/{pngmbln}/edit', 'PengembalianController@edit');
+  Route::patch('/pengembalian/{pngmbln}', 'PengembalianController@store');
   
-  Auth::routes();
-  
-  Route::get('/home', 'HomeController@index')->name('home');
-  Auth::routes();
-  
-  Route::get('/home', 'HomeController@index')->name('home');
-  
-  Auth::routes();
-  
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

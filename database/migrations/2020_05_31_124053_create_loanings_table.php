@@ -20,6 +20,8 @@ class CreateLoaningsTable extends Migration
                 $table->char('nim', 9);
                 $table->string('judul_buku');
                 $table->string('nama_penerbit');
+                $table->date('tgl_pinjam');
+                $table->date('tgl_kembali')->nullable();
                 $table->timestamps();
         });
     }

@@ -1,6 +1,6 @@
-@extends('layout.main')
+@extends('layouts.app')
 @section('title', 'Halaman Pengembalian')
-@section('container')
+@section('content')
 
         <div class="container">
             <div class="row">
@@ -16,6 +16,7 @@
                                 <th scope="col">Judul Buku</th>
                                 <th scope="col">Nama Penerbit</th>
                                 <th scope="col">Tanggal Peminjaman</th>
+                                <th scope="col">Tanggal Pengembalian</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Tindakan</th>
                             </tr>
@@ -29,6 +30,8 @@
                                 <td>{{ $pngmbln->judul_buku }}</td>
                                 <td>{{ $pngmbln->nama_penerbit }}</td>
                                 <td>{{ $pngmbln->tgl_pinjam}}</td>
+                                <td>{{ $pngmbln->tgl_kembali}}</td>
+
                                 <td>
                                     @if($pngmbln->tgl_kembali == null)
                                     <p>Belum Dikembalikan</p>

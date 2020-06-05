@@ -1,6 +1,6 @@
-@extends('layout.main')
+@extends('layouts.app')
 @section('title', 'Halaman Peminjaman')
-@section('container')
+@section('content')
         <div class="container">
             <div class="row">
                 <div class="col">
