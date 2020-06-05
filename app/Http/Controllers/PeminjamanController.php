@@ -40,7 +40,6 @@ class PeminjamanController extends Controller
         
         $validatedData = $request->validate([
             'nama' => 'required',
-            'username' => 'required',
             'nim' => 'required|size:9',
             'judul_buku' => 'required',
             'nama_penerbit' => 'required',
@@ -90,7 +89,6 @@ class PeminjamanController extends Controller
     {
         $validatedData = $request->validate([
             'nama' => 'required',
-            'username' => 'required',
             'nim' => 'required|size:9',
             'judul_buku' => 'required',
             'nama_penerbit' => 'required',
@@ -100,7 +98,6 @@ class PeminjamanController extends Controller
         Loaning::where('id', $pmjmn->id)
                 ->update([
                     'nama' => $request->nama,
-                    'username' => $request->username,
                     'nim' => $request->nim,
                     'judul_buku' => $request->judul_buku,
                     'nama_penerbit' => $request->nama_penerbit,

@@ -19,7 +19,6 @@
                             <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Nama</th>
-                                <th scope="col">Username</th>
                                 <th scope="col">NIM</th>
                                 <th scope="col">Judul Buku</th>
                                 <th scope="col">Nama Penerbit</th>
@@ -32,7 +31,6 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>{{ $pmjmn->nama }}</td>
-                                <td>{{ $pmjmn->username }}</td>
                                 <td>{{ $pmjmn->nim }}</td>
                                 <td>{{ $pmjmn->judul_buku }}</td>
                                 <td>{{ $pmjmn->nama_penerbit }}</td>

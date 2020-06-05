@@ -1,4 +1,11 @@
 @extends('layouts.app')
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker3.standalone.min.css">
 @section('title', 'Edit Peminjaman')
 @section('content')
         <div class="container">
@@ -12,27 +19,22 @@
                         <div class="form-group">
                             <label for="nama">Nama</label>
                             <input type="text" class="form-control @error('nama') is-invalid @enderror" id="nama" placeholder="Nama Panjang" name="nama"  value="{{ $pmjmn->nama }}">
-                            @error('nama')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" class="form-control @error('username') is-invalid @enderror" id="username" placeholder="Masukkan Username" name="username" value="{{ $pmjmn->username }}">
-                            @error('username')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            @error('nama')<div class="invalid-feedback">Nama tidak boleh kosong.</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="nim">NIM</label>
                             <input type="text" class="form-control @error('nim') is-invalid @enderror" id="nim" placeholder="Masukkan NIM" name="nim" value="{{ $pmjmn->nim }}">
-                            @error('nim')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            @error('nim')<div class="invalid-feedback">NIM tidak boleh kosong.</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="judul_buku">Judul buku</label>
                             <input type="text" class="form-control @error('judul_buku') is-invalid @enderror" id="judul_buku" placeholder="Masukkan Judul Buku" name="judul_buku" value="{{ $pmjmn->judul_buku}}">
-                            @error('judul_buku')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            @error('judul_buku')<div class="invalid-feedback">Judul buku tidak boleh kosong.</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="nama_penerbit">Nama Penerbit</label>
                             <input type="text" class="form-control @error('nama_penerbit') is-invalid @enderror" id="nama_penerbit" placeholder="Masukkan Nama Penerbit" name="nama_penerbit" value="{{ $pmjmn->nama_penerbit }}">
-                            @error('nama_penerbit')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                            @error('nama_penerbit')<div class="invalid-feedback">Nama penerbit tidak boleh kosong.</div>@enderror
                         </div>
                         <div class="form-group">
                             <label for="tgl_pinjam">Tanggal peminjaman</label>

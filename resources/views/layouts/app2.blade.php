@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title')</title>
+    <title>Perpustakaan IPB</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -33,14 +33,7 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <div class="navbar-nav">
-                            <a class="nav-item nav-link active" href="{{ url('/home') }}">Beranda</a>
-                            <a class="nav-item nav-link" href="{{ url('/peminjaman') }}">Peminjaman</a>
-                            <a class="nav-item nav-link" href="{{ url('/pengembalian') }}">Pengembalian</a>
-                        </div>
-                    </ul>
-
+                    
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->

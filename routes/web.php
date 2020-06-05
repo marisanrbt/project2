@@ -20,12 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-  //Route::get('/peminjaman', function () {
-  //  return view('peminjaman');
-  //});
-  
-  //Route::get('/', 'PagesController@beranda');
-  
   Route::get('/peminjaman', 'PeminjamanController@index');
   Route::get('/peminjaman/create', 'PeminjamanController@create');
   Route::post('/peminjaman', 'PeminjamanController@store');
