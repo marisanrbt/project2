@@ -15,7 +15,6 @@
                                 <th scope="col">NIM</th>
                                 <th scope="col">Judul Buku</th>
                                 <th scope="col">Nama Penerbit</th>
-                                <th scope="col">Tanggal Peminjaman</th>
                                 <th scope="col">Tanggal Pengembalian</th>
                                 <th scope="col">Status</th>
                                 <th scope="col">Tindakan</th>
@@ -29,7 +28,6 @@
                                 <td>{{ $pngmbln->nim }}</td>
                                 <td>{{ $pngmbln->judul_buku }}</td>
                                 <td>{{ $pngmbln->nama_penerbit }}</td>
-                                <td>{{ $pngmbln->tgl_pinjam}}</td>
                                 <td>{{ $pngmbln->tgl_kembali}}</td>
 
                                 <td>

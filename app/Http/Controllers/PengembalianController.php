@@ -70,7 +70,7 @@ class PengembalianController extends Controller
      * @param  \App\Pengembalian  $pengembalian
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pengembalian $pngmbln)
+    public function update(Request $request, Returning $pngmbln)
     {
         $validatedData = $request->validate([
             'tgl_kembali' => 'required'

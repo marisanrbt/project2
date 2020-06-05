@@ -35,5 +35,5 @@ Route::get('/home', 'HomeController@index')->name('home');
   
   Route::get('/pengembalian', 'PengembalianController@index');
   Route::get('/pengembalian/{pngmbln}/edit', 'PengembalianController@edit');
-  Route::patch('/pengembalian/{pngmbln}', 'PengembalianController@store');
+  Route::patch('/pengembalian/{pngmbln}', 'PengembalianController@update');
   
